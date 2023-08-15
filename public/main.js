@@ -1,1 +1,1 @@
-document.querySelector('body').innerHTML = '<h1>タイトル</h1>';
+document.querySelector('body').innerHTML = '<h1>タイトル1</h1>';
