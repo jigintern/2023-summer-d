@@ -14,54 +14,80 @@
   margin: 0;
   padding: 0;
 }
-.marginContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+html, body {
+  width: 100vw;
+  height: 100vh;
 }
-.backgroundContainer{
-  display: flex;
-  width: 80%;
-  background-color: #6EA4CA;
+
+main {
+  width: 100vw;
+  height: 100vh;
+  border: 40px solid white;
+
+  background-color: paleturquoise;
+
+  display: grid;
+  place-content: center;
+
+  grid-template: "pop title-widget" 1fr
+                 ". title-widget" 1fr
+                 / 1fr 1fr;
+
 }
-.parentBlowingCircleWidget{
-  display: flex;
+
+.pop {
+  grid-area: pop;
+
+  width: 300px;
+  height: 300px;
+  margin-top: -10px;
+  margin-left: -10px;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  justify-content: center;
-  align-items: center;
-  background-color: #274765;
-  overflow: visible;
-}
-.childBlowingCircleWidget{
-  display: flex;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  justify-content: center;
-  align-items: center;
-  background-color: #F4FBFE;
-  overflow: visible;
+  border: 20px solid midnightblue;
+  padding: 10px;
+
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: aliceblue;
+  
+  display: grid;
+  place-content: center;
+  
   transform: rotate(-15deg);
 }
-.mainCircleWidget{
+
+.title-widget {
+  grid-area: title-widget;
+  
+  width: 500px;
+  height: 500px;
+  margin-block: auto;
+  border-radius: 50%;
+
+  background-color: aliceblue;
+
   display: flex;
-  width: 400px;
-  height: 400px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F4FBFE;
-  border-radius: 50%;
-  flex-direction: column;
 }
-img{
-  width: 400px; 
-  height: auto; 
+
+.title-widget>h1 {
+  font-size: 64px;
 }
-h1{
-  font-size: 50px;
-}
-p{
-  font-size: 100px;
+
+.title-widget>button {
+  width: 200px;
+  margin-top: 32px;
+
+  border-radius: 100vh;
+
+  border: none;
+  background-color: midnightblue;
+  font-size: 32px;
+  font-weight: bold;
+  color: white
 }
