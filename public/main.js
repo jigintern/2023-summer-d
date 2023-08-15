@@ -1,61 +1,34 @@
+import {ButtonComponent} from"./buttonComponent.js";
+import {jsonLoad} from"./jsonLoder.js";
 
+const buttonComponent=new ButtonComponent();
+const panel=document.querySelector(".panel");
+panel.appendChild(buttonComponent);
 
+window.onload = function() {
+    buttonsTextUpdate(0);
+};
 
-class QuizComponent extends HTMLElement {
-    constructor() {
-        super();
-        const quizContainer=document.createElement("div");
-        quizContainer.style.width="100%";
-        quizContainer.style.height="100%";
-        quizContainer.style.margin="auto";
-        quizContainer.style.backgroundImage="url(image/sample.jpg)";
-        quizContainer.style.backgroundRepeat="no-repeat";                                    
-        quizContainer.style.backgroundPosition="center center";      
-        quizContainer.style.backgroundSize="contain"; 
-        quizContainer.style.width="100%";                  
-        quizContainer.style.height=window.innerHeight;   
-        quizContainer.style.border="10px solid yellow";
-        this.appendChild(quizContainer);
-    
-        const questionText=document.createElement("h1");
-        questionText.textContent="問題文";
-        //questionText.style.position="absolute";
-        questionText.style.color="white";
-        quizContainer.appendChild(questionText);
-        for(let i=0; i<3; i++){
-            const selectButton=document.createElement("button");
-            selectButton.textContent="ボタン"+i;
-            selectButton.style.margin="auto";
-            selectButton.style.marginTop="40px";
-            selectButton.style.display="flex";
-            selectButton.style.width="60%";
-            selectButton.style.justifyContent = "center";
-            selectButton.style.alignItems = "center";
-            //selectButton.style.position="absolute";
-            selectButton.value=i;
+async function buttonsTextUpdate(quizNum){
+    for(let i=0; i<3; i++){
+        const quizData=await jsonLoad(quizNum);
 
-            selectButton.addEventListener("click",function(){
-                console.log(this.value);
-            });
-
-            quizContainer.appendChild(selectButton);
+        switch(i){
+            case 0:
+                buttonComponent.selectButtons[i].textContent=quizData.choices.A;
+                console.log(quizData.choices.A);
+                break;
+            case 1:
+                buttonComponent.selectButtons[i].textContent=quizData.choices.B;
+                console.log(quizData.choices.B);
+                break;
+            case 2:
+                buttonComponent.selectButtons[i].textContent=quizData.choices.C;
+                console.log(quizData.choices.C);
+                break;
         }
-
-        function jsonLoad(quizNum){
-            fetch("/quiz/"+quizNum)
-            .then(response =>{
-            return response.json();
-            })
-            .then(quizData =>{
-                console.log(quizData);
-                this.correctNum=1;
-            })
-            .catch(error =>{
-                console.error(error);
-            });
-        }
-
-      }
+        
+    }
 }
 
-customElements.define("quiz-component", QuizComponent);
+
