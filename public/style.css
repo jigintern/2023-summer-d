@@ -28,6 +28,9 @@
   background-color: #6EA4CA;
 }
 .parentBlowingCircleWidget{
+  position: absolute;
+  left: 75px;
+  top: 0px;
   display: flex;
   border-radius: 50%;
   width: 200px;
@@ -44,19 +47,10 @@
   height: 150px;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: #F4FBFE;
   overflow: visible;
   transform: rotate(-15deg);
-}
-.mainCircleWidget{
-  display: flex;
-  width: 400px;
-  height: 400px;
-  justify-content: center;
-  align-items: center;
-  background-color: #F4FBFE;
-  border-radius: 50%;
-  flex-direction: column;
 }
 img{
   width: 400px; 
@@ -64,7 +58,42 @@ img{
 }
 h1{
   font-size: 50px;
+  margin: 0 0 30px 0;
 }
-p{
-  font-size: 100px;
+.mainCircleWidget{
+  position: absolute;
+  display: flex;
+  width: 425px;
+  height: 425px;
+  top: 125px;
+  right: 225px;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4FBFE;
+  border-radius: 50%;
+  flex-direction: column;
+}
+.questionWidget{
+  position: absolute;
+  top: 0px;
+  right: 150px;
+  font-size: 300px;
+  transform: rotate(-7deg);
+  color: #274765;
+}
+.exclamationWidget{
+  position: absolute;
+  top: 225px;
+  right: 565px;
+  font-size: 300px;
+  transform: rotate(-15deg);
+  color: #274765;
+}
+button {
+  background-color: #274765;
+  border-radius: 75%;
+  border: none;
+  font-size: 30px;
+  color: #FFFFFF;
+  padding: 20px 60px;
 }
