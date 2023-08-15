@@ -10,15 +10,9 @@
     --color-other: #f3cc03;
   
     /* 基本色 */
-    --color-text: #FFFFFF;
-    --color-background: #FFFFFF;
+    --color-text:  #008080;
+    --color-background:#17517e;
   }
-  
- 
-
-  /* 基本色 */
-  --color-text: #FFFFFF;
-  --color-background: #FFFFFF;
 }
 
 * {
