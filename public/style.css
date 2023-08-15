@@ -3,7 +3,9 @@
   /* テーマカラー */
   --color-primary: #FFFFFF;
   --color-secondary: #FFFFFF;
-  --color-accent: #FFFFFF;
+  --color-positive: #FFFFFF;
+  --color-negative: #FFFFFF;
+  --color-other: #FFFFFF;
   /* 基本色 */
   --color-text: #FFFFFF;
   --color-background: #FFFFFF;
