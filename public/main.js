@@ -1,9 +1,10 @@
-const quizContainer=document.createElement("div");
-const questionText=document.createElement("h1");
+
+
 
 class QuizComponent extends HTMLElement {
     constructor() {
         super();
+        const quizContainer=document.createElement("div");
         quizContainer.style.width="100%";
         quizContainer.style.height="100%";
         quizContainer.style.margin="auto";
@@ -16,7 +17,7 @@ class QuizComponent extends HTMLElement {
         quizContainer.style.border="10px solid yellow";
         this.appendChild(quizContainer);
     
-
+        const questionText=document.createElement("h1");
         questionText.textContent="問題文";
         //questionText.style.position="absolute";
         questionText.style.color="white";
@@ -40,7 +41,7 @@ class QuizComponent extends HTMLElement {
             quizContainer.appendChild(selectButton);
         }
 
-        async function jsonLoad(quizNum){
+        function jsonLoad(quizNum){
             fetch("/quiz/"+quizNum)
             .then(response =>{
             return response.json();
