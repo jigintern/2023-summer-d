@@ -6,6 +6,7 @@ const panel=document.querySelector(".panel");
 panel.appendChild(buttonComponent);
 
 let quizNum=0;
+let quizData;
 
 window.onload = function() {
     initSetButtons();
@@ -21,8 +22,28 @@ function initSetButtons(){
 function updateSetButtons(){
     for(let i=0; i<3; i++){
         buttonComponent.selectButtons[i].addEventListener("click",async()=>{
+            let quizAnswer;
+
+            switch(quizData.answer){
+                case "A":
+                    quizAnswer=0;
+                    break;
+                case "B":
+                    quizAnswer=1;
+                    break;
+                case "C":
+                    quizAnswer=2;
+                    break;
+            }
+
+            if(quizAnswer==buttonComponent.selectButtons[i].value){
+                alert("正解");
+            }
+            else{
+                alert("不正解");
+            }
+            
             quizNum++;
-            //ボタンをクリックしたら選択肢分のテキストを更新
             for(let j=0; j<3; j++){
                 updateButtonWithJson(j);
             }
@@ -31,7 +52,7 @@ function updateSetButtons(){
 }
 
 async function updateButtonWithJson(i){
-    const quizData=await jsonLoad(quizNum);
+    quizData=await jsonLoad(quizNum);
     switch(i){
         case 0:
             buttonComponent.selectButtons[i].textContent=quizData.choices.A;
