@@ -1,7 +1,9 @@
 export class ButtonComponent extends HTMLElement {
     constructor() {
         super();
-        this.selectButtons = [];
+        this.selectButtons =[];
+    }
+    connectedCallback() {
         for(let i=0; i<3; i++){
             const selectButton=document.createElement("button");
             selectButton.textContent="ボタン"+i;

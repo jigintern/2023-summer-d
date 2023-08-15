@@ -1,9 +1,14 @@
 import {ButtonComponent} from"./buttonComponent.js";
+import {TitleComponent} from"./titleComponent.js"
 import {jsonLoad} from"./jsonLoder.js";
 
 const buttonComponent=new ButtonComponent();
+const titleComponent=new TitleComponent();
+titleComponent.setAttribute("text", "adadwdawd");
 const panel=document.querySelector(".panel");
 panel.appendChild(buttonComponent);
+panel.appendChild(titleComponent);
+
 
 let quizNum=0;
 let quizData;
@@ -11,6 +16,8 @@ let quizData;
 window.onload = function() {
     initSetButtons();
     updateSetButtons();
+    titleComponent.setAttribute("text", "新しいテキスト");
+    titleComponent.connectedCallback();
 };
 
 function initSetButtons(){
@@ -42,7 +49,7 @@ function updateSetButtons(){
             else{
                 alert("不正解");
             }
-            
+
             quizNum++;
             for(let j=0; j<3; j++){
                 updateButtonWithJson(j);
