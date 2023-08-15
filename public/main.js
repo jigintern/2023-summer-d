@@ -1,0 +1,1 @@
+document.querySelector('body').innerHTML = '<h1>タイトル</h1>';

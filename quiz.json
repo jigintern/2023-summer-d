@@ -1,0 +1,20 @@
+[
+  {
+    "question": "問題文",
+    "choices": {
+      "A": "",
+      "B": "",
+      "C": ""
+    }, 
+    "answer": "A"
+  }, 
+  {
+    "question": "問題文",
+    "choices": {
+      "A": "",
+      "B": "",
+      "C": ""
+    }, 
+    "answer": "A"
+  }
+]

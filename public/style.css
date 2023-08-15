@@ -1,0 +1,16 @@
+/* CSSカスタムプロパティを全体で利用できるようにするためここで設定する */
+:root {
+  /* テーマカラー */
+  --color-primary: #FFFFFF;
+  --color-secondary: #FFFFFF;
+  --color-accent: #FFFFFF;
+  /* 基本色 */
+  --color-text: #FFFFFF;
+  --color-background: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
