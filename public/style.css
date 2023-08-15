@@ -1,9 +1,21 @@
 /* CSSカスタムプロパティを全体で利用できるようにするためここで設定する */
 :root {
   /* テーマカラー */
-  --color-primary: #FFFFFF;
-  --color-secondary: #FFFFFF;
-  --color-accent: #FFFFFF;
+  :root {
+    /* テーマカラー */
+    --color-primary: #17517e;
+    --color-secondary: #008080;
+    --color-positive: #b82e49​;
+    --color-negative: #b82e49;
+    --color-other: #f3cc03;
+  
+    /* 基本色 */
+    --color-text: #FFFFFF;
+    --color-background: #FFFFFF;
+  }
+  
+ 
+
   /* 基本色 */
   --color-text: #FFFFFF;
   --color-background: #FFFFFF;
