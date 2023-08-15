@@ -4,10 +4,10 @@ import {jsonLoad} from"./jsonLoder.js";
 
 const buttonComponent=new ButtonComponent();
 const titleComponent=new TitleComponent();
-titleComponent.setAttribute("text", "adadwdawd");
+titleComponent.setAttribute("text", "");
 const panel=document.querySelector(".panel");
-panel.appendChild(buttonComponent);
 panel.appendChild(titleComponent);
+panel.appendChild(buttonComponent);
 
 
 let quizNum=0;
@@ -16,17 +16,16 @@ let quizData;
 window.onload = function() {
     initSetButtons();
     updateSetButtons();
-    titleComponent.setAttribute("text", "新しいテキスト");
-    titleComponent.connectedCallback();
 };
 
-function initSetButtons(){
+async function initSetButtons(){
+    quizData=await jsonLoad(quizNum);
     for(let i=0; i<3; i++){
         updateButtonWithJson(i)
     }
 }
 
-function updateSetButtons(){
+async function updateSetButtons(){
     for(let i=0; i<3; i++){
         buttonComponent.selectButtons[i].addEventListener("click",async()=>{
             let quizAnswer;
@@ -51,6 +50,7 @@ function updateSetButtons(){
             }
 
             quizNum++;
+            quizData=await jsonLoad(quizNum);
             for(let j=0; j<3; j++){
                 updateButtonWithJson(j);
             }
@@ -58,8 +58,10 @@ function updateSetButtons(){
     }
 }
 
-async function updateButtonWithJson(i){
-    quizData=await jsonLoad(quizNum);
+function updateButtonWithJson(i){
+    //無駄に2回同じ処理してるtitleComponentの更新
+    titleComponent.setAttribute("text",quizData.question);
+    titleComponent.connectedCallback();
     switch(i){
         case 0:
             buttonComponent.selectButtons[i].textContent=quizData.choices.A;
