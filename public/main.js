@@ -16,10 +16,17 @@ let quizData;
 window.onload = function() {
     initSetButtons();
     updateSetButtons();
+    buttonComponent.feedbackButton.addEventListener("click", () => {
+        buttonComponent.answerMode();
+        titleComponent.setAttribute("text",quizData.question);
+        titleComponent.connectedCallback();
+    });
 };
 
 async function initSetButtons(){
     quizData=await jsonLoad(quizNum);
+    titleComponent.setAttribute("text",quizData.question);
+    titleComponent.connectedCallback();
     for(let i=0; i<3; i++){
         updateButtonWithJson(i)
     }
@@ -30,6 +37,7 @@ async function updateSetButtons(){
         buttonComponent.selectButtons[i].addEventListener("click",async()=>{
             let quizAnswer;
 
+            buttonComponent.answerMode();
             switch(quizData.answer){
                 case "A":
                     quizAnswer=0;
@@ -43,9 +51,15 @@ async function updateSetButtons(){
             }
 
             if(quizAnswer==buttonComponent.selectButtons[i].value){
+                buttonComponent.feedbackMode();
+                titleComponent.setAttribute("text",quizData.advice);
+                titleComponent.connectedCallback();
                 alert("正解");
             }
             else{
+                buttonComponent.feedbackMode();
+                titleComponent.setAttribute("text",quizData.advice);
+                titleComponent.connectedCallback();
                 alert("不正解");
             }
 
@@ -60,8 +74,6 @@ async function updateSetButtons(){
 
 function updateButtonWithJson(i){
     //無駄に2回同じ処理してるtitleComponentの更新
-    titleComponent.setAttribute("text",quizData.question);
-    titleComponent.connectedCallback();
     switch(i){
         case 0:
             buttonComponent.selectButtons[i].textContent=quizData.choices.A;
