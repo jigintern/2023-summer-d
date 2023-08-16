@@ -20,6 +20,8 @@ window.onload = function() {
         buttonComponent.answerMode();
         titleComponent.setAttribute("text",quizData.question);
         titleComponent.connectedCallback();
+        panel.style.backgroundImage="url('/image/sample2.jpg')";
+        panel.style.setProperty('--pseudo-bg-image', 'url("/image/sample2.jpg")');
     });
 };
 
