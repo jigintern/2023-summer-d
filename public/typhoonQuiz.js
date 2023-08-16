@@ -19,13 +19,12 @@ window.onload=function(){
     updateSetButtons();
 
     buttonComponent.feedbackButton.addEventListener("click",()=>{
-
+       
         buttonComponent.answerMode();
         titleComponent.setAttribute("text",quizData.question);
         titleComponent.connectedCallback();
-        panel.style.backgroundImage="url('/image/sample2.jpg')";
-        panel.style.setProperty('--pseudo-bg-image', 'url("/image/sample2.jpg")');
 
+        backImageChange("sample2.jpg");
     });
 
 };
@@ -49,6 +48,7 @@ async function updateSetButtons(){
             let quizAnswer;
 
             buttonComponent.answerMode();
+            backImageChange("sample2.jpg");
             
             switch(quizData.answer){
                 case "A":
@@ -100,4 +100,10 @@ function updateButtonWithJson(i){
             break;
     }
 
+}
+
+function backImageChange(imagePaht){
+    //urlの中にquizData.imagePahtを入れる予定　 `/image/${quizData.imagePaht}`
+    panel.style.backgroundImage=`url("/image/${imagePaht}")`;
+    panel.style.setProperty("--backimage", `url("/image/${imagePaht}")`);
 }
