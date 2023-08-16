@@ -4,7 +4,7 @@ import {getQuiz} from"./getQuiz.js";
 
 const buttonComponent=new ButtonComponent();
 const titleComponent=new TitleComponent();
-titleComponent.setAttribute("text", "");
+titleComponent.setAttribute("text","");
 const panel=document.querySelector(".panel");
 panel.appendChild(titleComponent);
 panel.appendChild(buttonComponent);
@@ -18,7 +18,7 @@ window.onload=function(){
     initSetButtons();
     updateSetButtons();
 
-    buttonComponent.feedbackButton.addEventListener("click", () => {
+    buttonComponent.feedbackButton.addEventListener("click",()=>{
 
         buttonComponent.answerMode();
         titleComponent.setAttribute("text",quizData.question);

@@ -5,7 +5,7 @@ export class TitleComponent extends HTMLElement{
         this.titleText=document.createElement("h1");
     }
 
-    connectedCallback() {
+    connectedCallback(){
         const text=this.getAttribute("text") || "読み込みエラー";
         this.titleText.textContent=text;
         this.titleText.style.color="white";

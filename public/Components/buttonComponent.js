@@ -1,12 +1,12 @@
-export class ButtonComponent extends HTMLElement {
+export class ButtonComponent extends HTMLElement{
 
-    constructor() {
+    constructor(){
         super();
         this.selectButtons=[];
         this.feedbackButton=document.createElement("button");
     }
 
-    connectedCallback() {
+    connectedCallback(){
 
         for(let i=0; i<3; i++){
 
@@ -29,8 +29,8 @@ export class ButtonComponent extends HTMLElement {
         this.feedbackButton.style.margin="auto";
         this.feedbackButton.style.width="30%";
         this.feedbackButton.style.display="flex";
-        this.feedbackButton.style.justifyContent = "center";
-        this.feedbackButton.style.alignItems = "center";
+        this.feedbackButton.style.justifyContent="center";
+        this.feedbackButton.style.alignItems="center";
         this.feedbackButton.style.display="none";
         this.appendChild( this.feedbackButton);
 
@@ -58,4 +58,4 @@ export class ButtonComponent extends HTMLElement {
 
 }
 
-customElements.define("button-component", ButtonComponent);
+customElements.define("button-component",ButtonComponent);
