@@ -13,33 +13,43 @@ panel.appendChild(buttonComponent);
 let quizNum=0;
 let quizData;
 
-window.onload = function() {
+window.onload=function(){
+
     initSetButtons();
     updateSetButtons();
+
     buttonComponent.feedbackButton.addEventListener("click", () => {
+
         buttonComponent.answerMode();
         titleComponent.setAttribute("text",quizData.question);
         titleComponent.connectedCallback();
         panel.style.backgroundImage="url('/image/sample2.jpg')";
         panel.style.setProperty('--pseudo-bg-image', 'url("/image/sample2.jpg")');
+
     });
+
 };
 
 async function initSetButtons(){
+
     quizData=await getQuiz(quizNum);
     titleComponent.setAttribute("text",quizData.question);
     titleComponent.connectedCallback();
     for(let i=0; i<3; i++){
         updateButtonWithJson(i)
     }
+
 }
 
 async function updateSetButtons(){
+
     for(let i=0; i<3; i++){
+
         buttonComponent.selectButtons[i].addEventListener("click",async()=>{
             let quizAnswer;
 
             buttonComponent.answerMode();
+            
             switch(quizData.answer){
                 case "A":
                     quizAnswer=0;
@@ -67,15 +77,17 @@ async function updateSetButtons(){
 
             quizNum++;
             quizData=await getQuiz(quizNum);
+
             for(let j=0; j<3; j++){
                 updateButtonWithJson(j);
             }
+
         })
     }
 }
 
 function updateButtonWithJson(i){
-    //無駄に2回同じ処理してるtitleComponentの更新
+
     switch(i){
         case 0:
             buttonComponent.selectButtons[i].textContent=quizData.choices.A;
@@ -87,4 +99,5 @@ function updateButtonWithJson(i){
             buttonComponent.selectButtons[i].textContent=quizData.choices.C;
             break;
     }
+
 }
