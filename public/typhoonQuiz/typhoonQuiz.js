@@ -1,6 +1,6 @@
-import {ButtonComponent} from"./Components/buttonComponent.js";
-import {TitleComponent} from"./Components/titleComponent.js"
-import {getQuiz} from"./typhoonQuiz/getQuiz.js";
+import {ButtonComponent} from"../Components/buttonComponent.js";
+import {TitleComponent} from"../Components/titleComponent.js"
+import {getQuiz} from"../typhoonQuiz/getQuiz.js";
 
 const buttonComponent=new ButtonComponent();
 const titleComponent=new TitleComponent();

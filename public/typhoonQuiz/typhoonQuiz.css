@@ -1,5 +1,5 @@
 :root {
-    --backimage: url(image/sample.jpg);
+    --backimage: url(../image/sample.jpg);
 }
 
 main {
