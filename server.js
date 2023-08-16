@@ -5,18 +5,15 @@ import quiz from "./quiz.json" assert {type: "json"};
 
 serve(async (req) => {
   const pathname = new URL(req.url).pathname;
-  console.log(pathname);
 
-  if (req.method === "GET" && pathname === "/welcome-message") {
-    return new Response("jigインターンへようこそ！");
-  }
+  if (req.method === "GET" && pathname.startsWith("/quiz") ) {
+    const queriedID = new URL(req.url).searchParams.get("id");
+    console.log(queriedID);
 
-  if (req.method === "GET" && pathname.startsWith("/quiz/") ) {
-    // console.log("fire", req.url, pathname);
-    let id = pathname.replace("/quiz/", "");
-    console.log(id);
+    const res = JSON.stringify(quiz[queriedID]);
+    console.log(res);
 
-    return new Response(JSON.stringify(quiz[id]));
+    return new Response(res ?? JSON.stringify({error: "E-001", messsage: "unknown quiz id."}));
   }
 
   return serveDir(req, {
