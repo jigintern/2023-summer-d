@@ -1,5 +1,5 @@
-import {ButtonComponent} from"./buttonComponent.js";
-import {TitleComponent} from"./titleComponent.js"
+import {ButtonComponent} from"./Components/buttonComponent.js";
+import {TitleComponent} from"./Components/titleComponent.js"
 import {getQuiz} from"./getQuiz.js";
 
 const buttonComponent=new ButtonComponent();
