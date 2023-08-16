@@ -1,11 +1,13 @@
 import {ButtonComponent} from"../Components/buttonComponent.js";
 import {TitleComponent} from"../Components/titleComponent.js"
 import {getQuiz} from"../typhoonQuiz/getQuiz.js";
+import "../Components/imageButton.js"
 
 const buttonComponent=new ButtonComponent();
 const titleComponent=new TitleComponent();
 titleComponent.setAttribute("text","");
 const panel=document.querySelector(".panel");
+
 panel.appendChild(titleComponent);
 panel.appendChild(buttonComponent);
 
@@ -65,12 +67,15 @@ async function updateSetButtons(){
                 buttonComponent.feedbackMode();
                 titleComponent.setAttribute("text",quizData.advice);
                 titleComponent.connectedCallback();
+                titleComponent.titleText.style.backgroundColor="#24E724";
+                console.log(titleComponent.titleText);
                 alert("正解");
             }
             else{
                 buttonComponent.feedbackMode();
                 titleComponent.setAttribute("text",quizData.advice);
                 titleComponent.connectedCallback();
+                titleComponent.titleText.style.backgroundColor="#B82E49";
                 alert("不正解");
             }
 

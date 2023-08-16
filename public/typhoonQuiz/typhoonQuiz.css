@@ -7,6 +7,7 @@ main {
     height: 100vh;
 
     border: 10px solid white;
+    display: flex;
 }
 
 .panel {
@@ -19,6 +20,10 @@ main {
     background-position: center;
 
     background-color: transparent;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .panel::before {
@@ -38,4 +43,17 @@ main {
     background-position: center;
 
     filter: blur(10px);
+}
+
+.sideArea{
+    width: 100px;
+    height: 100%;
+    background-color:#008080;
+}
+
+.homeButton{
+    background-image:url(/image/home.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
 }

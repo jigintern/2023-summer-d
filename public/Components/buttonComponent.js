@@ -15,25 +15,36 @@ export class ButtonComponent extends HTMLElement{
             selectButton.style.margin="auto";
             selectButton.style.marginTop="40px";
             selectButton.style.display="flex";
-            selectButton.style.width="60%";
-            selectButton.style.justifyContent = "center";
-            selectButton.style.alignItems = "center";
+            selectButton.style.width="50vw";
+            selectButton.style.justifyContent ="center";
+            selectButton.style.alignItems="center";
+            selectButton.style.backgroundColor="#f3cc03";
+            selectButton.style.fontSize="20px";
+            selectButton.style.padding="25px";
+            selectButton.style.borderRadius="10px";
             selectButton.value=i;
+            
                 
             this.selectButtons.push(selectButton);
             this.appendChild(selectButton);
 
         }
 
-        this.feedbackButton.textContent="次に進む";
+        //this.feedbackButton.textContent="次に進む";
         this.feedbackButton.style.margin="auto";
-        this.feedbackButton.style.width="30%";
+        this.feedbackButton.style.width="150px";
+        this.feedbackButton.style.height="150px";
         this.feedbackButton.style.display="flex";
         this.feedbackButton.style.justifyContent="center";
         this.feedbackButton.style.alignItems="center";
         this.feedbackButton.style.display="none";
+        this.feedbackButton.style.backgroundColor="#24E724";
+        this.feedbackButton.style.marginTop="50px";
+        this.feedbackButton.style.backgroundImage=`url("/image/feedbuckButton2.jpg")`;
+        this.feedbackButton.style.backgroundRepeat="no-repeat";
+        this.feedbackButton.style.backgroundSize = "100% 100%";
+        this.feedbackButton.style.backgroundPosition="center";
         this.appendChild( this.feedbackButton);
-
     }
 
     feedbackMode(){
