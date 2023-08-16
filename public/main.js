@@ -1,6 +1,6 @@
 import {ButtonComponent} from"./buttonComponent.js";
 import {TitleComponent} from"./titleComponent.js"
-import {jsonLoad} from"./jsonLoder.js";
+import {getQuiz} from"./getQuiz.js";
 
 const buttonComponent=new ButtonComponent();
 const titleComponent=new TitleComponent();
@@ -24,7 +24,7 @@ window.onload = function() {
 };
 
 async function initSetButtons(){
-    quizData=await jsonLoad(quizNum);
+    quizData=await getQuiz(quizNum);
     titleComponent.setAttribute("text",quizData.question);
     titleComponent.connectedCallback();
     for(let i=0; i<3; i++){
@@ -64,7 +64,7 @@ async function updateSetButtons(){
             }
 
             quizNum++;
-            quizData=await jsonLoad(quizNum);
+            quizData=await getQuiz(quizNum);
             for(let j=0; j<3; j++){
                 updateButtonWithJson(j);
             }

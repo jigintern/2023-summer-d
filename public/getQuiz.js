@@ -1,6 +1,4 @@
-export let  jsonData;
-
-export async function jsonLoad(quizNum){
+export async function getQuiz(quizNum){
     try{
         const response=await fetch("/quiz/"+quizNum);
         const quizData=await response.json();
