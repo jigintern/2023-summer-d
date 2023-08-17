@@ -22,7 +22,18 @@ export class ButtonComponent extends HTMLElement{
             selectButton.style.fontSize="20px";
             selectButton.style.padding="25px";
             selectButton.style.borderRadius="10px";
+            selectButton.style.transition='all 0.2s';
             selectButton.value=i;
+            selectButton.addEventListener('mouseover', () => {
+                selectButton.style.cursor='pointer';
+                selectButton.style.transform='translateY(-5px)';
+                selectButton.style.boxShadow='0px 5px darkgray';
+            })
+            selectButton.addEventListener('mouseout', () => {
+                selectButton.style.cursor='auto';
+                selectButton.style.transform='none';
+                selectButton.style.boxShadow='none';
+            })
             
                 
             this.selectButtons.push(selectButton);
