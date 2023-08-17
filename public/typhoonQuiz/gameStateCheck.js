@@ -5,7 +5,7 @@ export function gameStateCheck(choice){
     if(!isNaN(choice.dest) && !isNaN(parseInt(choice.dest))){
         if(choice.damaged){
             playerHP--;
-            gameState=(playerHP>0) ? 0 : 1;
+            gameState=(playerHP>0) ? 0 : 3;
             console.log("けが");
             alert("怪我しました")
         }
@@ -13,7 +13,7 @@ export function gameStateCheck(choice){
             console.log("継続");
         }
     }
-    else if(choice.dest.startsWith("e-8")){
+    else if(choice.dest.startsWith("e-10")){
         gameState=2;
         console.log("ゴール");
     }

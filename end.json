@@ -36,6 +36,10 @@
         "isGoodEnd": false
     },
     {
+        "message": "体に負担がかかりすぎて、衰弱死してしまった...",
+        "isGoodEnd": false
+    },
+    {
         "message": "あなたは数々の苦難を乗り越えて避難所へたどり着いた。おめでとう！",
         "isGoodEnd": true
     }

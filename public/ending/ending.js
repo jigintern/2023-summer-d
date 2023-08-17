@@ -5,7 +5,7 @@ const distParameter=urlParams.get("dist");
 const endIndex=distParameter.substring(distParameter.indexOf('-') + 1);
 console.log(endIndex);
 
-let endData= await getEndJson(endIndex);
+let endData=await getEndJson(endIndex);
 console.log(endData);
-const tmp = endData.message;
-document.getElementById("message").textContent = tmp;
+const tmp=endData.message;
+document.getElementById("message").textContent=tmp;
