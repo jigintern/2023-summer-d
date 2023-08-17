@@ -16,7 +16,7 @@ export class ButtonComponent extends HTMLElement{
             selectButton.style.marginTop="40px";
             selectButton.style.display="flex";
             selectButton.style.width="50vw";
-            selectButton.style.justifyContent ="center";
+            selectButton.style.justifyContent="center";
             selectButton.style.alignItems="center";
             selectButton.style.backgroundColor="#f3cc03";
             selectButton.style.fontSize="20px";
@@ -52,7 +52,7 @@ export class ButtonComponent extends HTMLElement{
         this.feedbackButton.style.marginTop="50px";
         this.feedbackButton.style.backgroundImage=`url("/image/feedbuckButton2.jpg")`;
         this.feedbackButton.style.backgroundRepeat="no-repeat";
-        this.feedbackButton.style.backgroundSize = "100% 100%";
+        this.feedbackButton.style.backgroundSize="100% 100%";
         this.feedbackButton.style.backgroundPosition="center";
         this.appendChild( this.feedbackButton);
         
