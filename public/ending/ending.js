@@ -4,7 +4,7 @@ const tmp2 = 30;
 const scoreText = "Your Score = " + tmp2;
 pushToQuiz.addEventListener("click", () => {
   console.log("fire")
-  window.location.href = "/quiz.html"
+  window.location.href = "/typhoonQuiz/typhoonQuiz.html"
 })
 pushToIndex.addEventListener("click", () => {
   console.log("fire")
