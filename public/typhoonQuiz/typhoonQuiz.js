@@ -26,16 +26,16 @@ window.onload=function(){
 
         if(gameState==1){
             alert("ゲームオーバー");
-            window.location.href="../ending/gameover.html?dist="+quizDestination;
+            window.location.href="../ending/gameover.html?dest="+quizDestination;
         }
         else if(gameState==2){
             alert("ゴール");
-            window.location.href="../ending/gameclear.html?dist="+quizDestination;
+            window.location.href="../ending/gameclear.html?dest="+quizDestination;
         }
         else if(gameState==3){
             alert("ゲームオーバー");
             quizDestination="e-9"
-            window.location.href="../ending/gameover.html?dist="+quizDestination;
+            window.location.href="../ending/gameover.html?dest="+quizDestination;
         }
 
         quizData=await getQuiz(quizDestination);

@@ -1,8 +1,8 @@
 import{getEndJson} from"./getQuizEnd.js";
 
 const urlParams=new URLSearchParams(window.location.search);
-const distParameter=urlParams.get("dist");
-const endIndex=distParameter.substring(distParameter.indexOf('-') + 1);
+const destParameter=urlParams.get("dest");
+const endIndex=destParameter.substring(destParameter.indexOf('-') + 1);
 console.log(endIndex);
 
 let endData=await getEndJson(endIndex);
