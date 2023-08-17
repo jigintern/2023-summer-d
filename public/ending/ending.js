@@ -1,2 +1,5 @@
-const tmp = "災害で死んでしまった";
-document.getElementById("message").textContent = tmp;
+const startButton = document.querySelector("button")
+startButton.addEventListener("click", () => {
+  console.log("fire")
+  window.location.href = "/index.html"
+})
