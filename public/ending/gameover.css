@@ -1,0 +1,15 @@
+.gameover-image{
+    width: 110px;
+    height: 110px;
+    margin-top: 10px;
+    background-image: url("../image/gameover.png");
+}
+.result-widget{
+    width: 60%;
+    height: 250px;
+    background-color: #EF454A;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
