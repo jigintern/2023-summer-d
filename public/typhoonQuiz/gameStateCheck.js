@@ -13,7 +13,7 @@ export function gameStateCheck(choice){
             console.log("継続");
         }
     }
-    else if(choice.dest.startsWith("e-10")){
+    else if(choice.dest.startsWith("e-9")){
         gameState=2;
         console.log("ゴール");
     }

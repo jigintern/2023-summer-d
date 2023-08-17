@@ -34,7 +34,7 @@ window.onload=function(){
         }
         else if(gameState==3){
             alert("ゲームオーバー");
-            quizDestination="e-9"
+            quizDestination="e-10"
             window.location.href="../ending/gameover.html?dist="+quizDestination;
         }
 
