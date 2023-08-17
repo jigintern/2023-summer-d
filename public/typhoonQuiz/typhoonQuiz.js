@@ -14,7 +14,7 @@ panel.appendChild(buttonComponent);
 
 let quizDestination=0;
 let quizData;
-let gameState=0; //0だとゲーム中 1だとゲームオーバー 2だとゴール
+let gameState=0; //0だとゲーム中 1だとゲームオーバー 2だとゴール 3だと怪我によるゲームオーバー
 
 
 window.onload=function(){
@@ -26,9 +26,16 @@ window.onload=function(){
 
         if(gameState==1){
             alert("ゲームオーバー");
+            window.location.href="../ending/gameover.html?dest="+quizDestination;
         }
         else if(gameState==2){
             alert("ゴール");
+            window.location.href="../ending/gameclear.html?dest="+quizDestination;
+        }
+        else if(gameState==3){
+            alert("ゲームオーバー");
+            quizDestination="e-9"
+            window.location.href="../ending/gameover.html?dest="+quizDestination;
         }
 
         quizData=await getQuiz(quizDestination);
