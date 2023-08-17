@@ -12,8 +12,8 @@ main {
     display: flex; 
     width: 100%;
     justify-content: space-between;
-
 }
+
 .image-margin>div{
     display: flex;
     background-size: contain;
