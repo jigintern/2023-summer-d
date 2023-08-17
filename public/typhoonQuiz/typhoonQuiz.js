@@ -1,11 +1,13 @@
 import {ButtonComponent} from"../Components/buttonComponent.js";
 import {TitleComponent} from"../Components/titleComponent.js"
 import {getQuiz} from"../typhoonQuiz/getQuiz.js";
+import "../Components/imageButtonComponent.js"
 
 const buttonComponent=new ButtonComponent();
 const titleComponent=new TitleComponent();
 titleComponent.setAttribute("text","");
 const panel=document.querySelector(".panel");
+
 panel.appendChild(titleComponent);
 panel.appendChild(buttonComponent);
 
@@ -18,7 +20,7 @@ window.onload=function(){
     updateSetButtons();
 
     buttonComponent.feedbackButton.addEventListener("click",()=>{
-       
+
         buttonComponent.answerMode();
         titleComponent.setAttribute("text",quizData.question);
         titleComponent.connectedCallback();
@@ -65,12 +67,15 @@ async function updateSetButtons(){
                 buttonComponent.feedbackMode();
                 titleComponent.setAttribute("text",quizData.advice);
                 titleComponent.connectedCallback();
+                titleComponent.titleText.style.backgroundColor="#24E724";
+                console.log(titleComponent.titleText);
                 alert("正解");
             }
             else{
                 buttonComponent.feedbackMode();
                 titleComponent.setAttribute("text",quizData.advice);
                 titleComponent.connectedCallback();
+                titleComponent.titleText.style.backgroundColor="#B82E49";
                 alert("不正解");
             }
 
@@ -89,13 +94,13 @@ function updateButtonWithJson(i){
 
     switch(i){
         case 0:
-            buttonComponent.selectButtons[i].textContent=quizData.choices.A;
+            buttonComponent.selectButtons[i].textContent="A: "+quizData.choices.A;
             break;
         case 1:
-            buttonComponent.selectButtons[i].textContent=quizData.choices.B;
+            buttonComponent.selectButtons[i].textContent="B: "+quizData.choices.B;
             break;
         case 2:
-            buttonComponent.selectButtons[i].textContent=quizData.choices.C;
+            buttonComponent.selectButtons[i].textContent="C: "+quizData.choices.C;
             break;
     }
 
