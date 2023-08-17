@@ -14,6 +14,7 @@ class ImageButton extends HTMLElement{
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 background-position: center;
+                border: none;
                 width:100%;
                 height:10%;
             }
