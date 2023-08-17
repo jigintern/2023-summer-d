@@ -18,8 +18,8 @@ main {
   
   button{
     
-    width: 120px;
-    height: 60px;
+    width: 10vw;
+    height: 10vh;
     margin-top: 32px;
     border-radius: 100vh;
   
