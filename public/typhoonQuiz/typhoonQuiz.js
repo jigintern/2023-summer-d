@@ -48,7 +48,7 @@ window.onload=function(){
         titleComponent.setAttribute("text",quizData.question);
         titleComponent.connectedCallback();
 
-        backImageChange("sample2.jpg");
+        backImageChange(quizData.image);
     });
 
 };

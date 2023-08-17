@@ -1,0 +1,17 @@
+.gameclear-image{
+    width: 500px;
+    height: 500px;
+    margin-top: 10px;
+    background-image: url("../image/gameclear.png");
+}
+
+.result-widget{
+    width: 60%;
+    height: 250px;
+    background-color: #5AFF19;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    margin-top: -380px;
+}
