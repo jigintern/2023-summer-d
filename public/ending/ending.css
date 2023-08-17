@@ -1,0 +1,57 @@
+main {
+    width: 100vw;
+    height: 650px;
+    border: 40px solid white;
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+}
+
+.image-margin{
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;
+}
+
+.image-margin>div{
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.home-image{
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;
+    background-image: url("../image/home.jpg");
+}
+
+.setting-image{
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    background-image: url("../image/haguruma.jpg");
+}
+
+h1{
+    font-size: 72px;
+}
+
+#message,#score{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#pushToQuiz,#pushToIndex{
+    background-color: var(--color-other);
+    width: 22%;
+    height: 8%;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border : none;
+}
