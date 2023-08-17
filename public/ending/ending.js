@@ -7,6 +7,7 @@ pushToQuiz.addEventListener("click", () => {
   console.log("fire")
   window.location.href = "/typhoonQuiz/typhoonQuiz.html"
 })
+
 pushToIndex.addEventListener("click", () => {
   console.log("fire")
   window.location.href = "/index.html"
