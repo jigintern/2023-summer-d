@@ -10,5 +10,6 @@ pushToIndex.addEventListener("click", () => {
   console.log("fire")
   window.location.href = "/index.html"
 })
+
 const score = document.getElementById("score")
 score.textContent = scoreText;
