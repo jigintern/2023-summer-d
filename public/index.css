@@ -2,19 +2,41 @@ main {
   width: 100vw;
   height: 100vh;
   border: 40px solid white;
+  display: grid;
   background-color: var(--color-secondary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  place-content: center;
   background-image: url(image/indexBackground.jpg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  padding-left: 350px;
-  padding-top: 160px;
+  grid-template:
+    ". ." 1fr
+    ". title-widget" 2fr
+    ". ." 1fr
+    / 1fr 2fr ;
 }
-  
-button{    
+
+.title-widget {
+  grid-area: title-widget;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-widget>h1{
+  width: 420px;
+  height: 150px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--color-primary);
+  color: var(--color-other);
+  text-align: center;
+  padding-top: 15px;
+  font-size: 42px;
+}
+
+.title-widget>button {    
   width: 10vw;
   height: 10vh;
   margin-top: 32px;
