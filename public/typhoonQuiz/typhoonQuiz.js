@@ -26,9 +26,11 @@ window.onload=function(){
 
         if(gameState==1){
             alert("ゲームオーバー");
+            window.location.href = "../ending/gameover.html?dist="+quizDestination;
         }
         else if(gameState==2){
             alert("ゴール");
+            window.location.href = "../ending/gameclear.html?dist="+quizDestination;
         }
 
         quizData=await getQuiz(quizDestination);
