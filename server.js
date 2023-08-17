@@ -17,7 +17,7 @@ serve(async (req) => {
     return new Response(res ?? JSON.stringify({error: "E-001", messsage: "unknown quiz id."}));
   }
 
-  if (req.method === "GET" && pathname.startsWith("/quizend") ) {
+  if (req.method === "GET" && pathname.startsWith("/result") ) {
     const queriedID = new URL(req.url).searchParams.get("id");
     console.log(queriedID);
 

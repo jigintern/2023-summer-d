@@ -1,6 +1,11 @@
 import{getEndJson} from"./getQuizEnd.js";
 
-let endData= await getEndJson(0);
+const urlParams=new URLSearchParams(window.location.search);
+const distParameter=urlParams.get("dist");
+const endIndex=distParameter.substring(distParameter.indexOf('-') + 1);
+console.log(endIndex);
+
+let endData= await getEndJson(endIndex);
 console.log(endData);
-const tmp = "災害で死んでしまった";
+const tmp = endData.message;
 document.getElementById("message").textContent = tmp;
