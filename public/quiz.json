@@ -1,0 +1,242 @@
+[
+  {
+    "question": "あなたの住む町に台風が接近しているようです。\n 窓の対策はどうしますか？",
+    "choices": {
+      "A": {
+        "text": "窓・雨戸を閉め、窓ガラスに飛散防止フィルムを貼る",
+        "isCorrect": true,
+        "dest": 1,
+        "damaged": false
+      },
+      "B": {
+        "text": "開けっ放しにする",
+        "isCorrect": false,
+        "dest": "e-0",
+        "damaged": false
+      },
+      "C": {
+        "text": "神様にお祈りのダンスをする",
+        "isCorrect": false,
+        "dest": "e-0",
+        "damaged": false
+      }
+    }, 
+    "advice": "強い風に煽られた物が飛んで来る可能性があるので、窓が割れないように対策しましょう。"
+  }, 
+  {
+    "question": "あなたは台風の対策用品を買いに、ホームセンターに来ました。\n 何を買いますか？",
+    "choices": {
+      "A": {
+        "text": "走って逃げ切れる自信があるので、何も買わずに帰る",
+        "isCorrect": false,
+        "dest": "e-1",
+        "damaged": false
+      },
+      "B": {
+        "text": "洗剤やゴム手袋、スポンジを買う",
+        "isCorrect": false,
+        "dest": 2,
+        "damaged": true
+      },
+      "C": {
+        "text": "携帯ラジオや懐中電灯、非常食や水を買う",
+        "isCorrect": true,
+        "dest": 2,
+        "damaged": false
+      }
+    }, 
+    "advice": "停電や食料の枯渇に備え、物資を準備しておくようにしましょう。"
+  },
+  {
+    "question": "家に帰ってきたあなたですが、庭に飛ばされそうな軽いものがあると気づきました。\n どうしますか？",
+    "choices": {
+      "A": {
+        "text": "そのままにしておく",
+        "isCorrect": false,
+        "dest": 3,
+        "damaged": true
+      },
+      "B": {
+        "text": "家や物置の中にしまう",
+        "isCorrect": true,
+        "dest": 3,
+        "damaged": false
+      },
+      "C": {
+        "text": "蹴り飛ばす",
+        "isCorrect": false,
+        "dest": 3,
+        "damaged": true
+      }
+    }, 
+    "advice": "風で飛ばされたものは凶器になりうるので、固定するか家の中にしまいましょう。"
+  },  
+  {
+    "question": "あなたは家に帰って対策を終えましたが、まだ台風の到達までは時間があるようです。\n どうしますか？",
+    "choices": {
+      "A": {
+        "text": "自室でゲームをする",
+        "isCorrect": false,
+        "dest": 4,
+        "damaged": true
+      },
+      "B": {
+        "text": "さっき買った非常食で晩酌する",
+        "isCorrect": false,
+        "dest": 4,
+        "damaged": true
+      },
+      "C": {
+        "text": "ハザードマップで避難場所や避難経路、危険な場所を確認する",
+        "isCorrect": true,
+        "dest": 4,
+        "damaged": false
+      }
+    }, 
+    "advice": "スムーズに避難できるよう、事前に避難所など確認しておきましょう。"
+  },
+  {
+    "question": "当初の予想よりも早く台風が到達するようで、激しい雨が降っています。\n まだ少しなら時間はありそうですが、どうしますか？",
+    "choices": {
+      "A": {
+        "text": "まだ余裕があるので、庭で遊ぶ",
+        "isCorrect": false,
+        "dest": 5,
+        "damaged": true
+      },
+      "B": {
+        "text": "台風の近くまで見物に行く",
+        "isCorrect": false,
+        "dest": "e-2",
+        "damaged":false
+      },
+      "C": {
+        "text": "早めに避難を開始する",
+        "isCorrect": true,
+        "dest": 5,
+        "damaged": false
+      }
+    }, 
+    "advice": "台風に限らず、災害が発生した際は早めの行動を心掛けましょう。"
+  },
+  {
+    "question": "あなたは早めに避難を始めることにしました。\n 何で避難しますか？",
+    "choices": {
+      "A": {
+        "text": "徒歩",
+        "isCorrect": true,
+        "dest": 6,
+        "damaged": false
+      },
+      "B": {
+        "text": "車",
+        "isCorrect": false,
+        "dest": "e-3",
+        "damaged": false
+      },
+      "C": {
+        "text": "電車",
+        "isCorrect": false,
+        "dest": "e-4",
+        "damaged": false
+      }
+    }, 
+    "advice": "車は水没すると動けなくなり、電車は災害時は運休することが多いので、徒歩で避難するようにしましょう。"
+  },
+  {
+    "question": "あなたは動きやすい運動靴に履き替え、避難を開始しました。\n どのルートを通りますか？",
+    "choices": {
+      "A": {
+        "text": "川の近く",
+        "isCorrect": false,
+        "dest": "e-5",
+        "damaged": false
+      },
+      "B": {
+        "text": "高いところにある道路",
+        "isCorrect": true,
+        "dest": 7,
+        "damaged": false
+      },
+      "C": {
+        "text": "斜面の近く",
+        "isCorrect": false,
+        "dest": "e-6",
+        "damaged": false
+      }
+    },
+    "advice": "川の近くは氾濫、斜面の近くは土砂崩れに巻き込まれる恐れがあるので、高いところにある道路から避難しましょう。"
+  },
+  {
+    "question": "あなたは道路を通って避難していましたが、分かれ道に差し掛かりました。\n どっちに行きますか？",
+    "choices": {
+      "A": {
+        "text": "まだ冠水していない道路",
+        "isCorrect": true,
+        "dest": 8,
+        "damaged": false
+      },
+      "B": {
+        "text": "冠水して水浸しの道路",
+        "isCorrect": false,
+        "dest": 8,
+        "damaged": true
+      },
+      "C": {
+        "text": "来た道を引き返し、別の道を探す",
+        "isCorrect": false,
+        "dest": "e-7",
+        "damaged": false
+      }
+    }, 
+    "advice": "冠水した道路では足元が見えにくく危険なので、冠水していない道路を通るようにしましょう。\nまた、避難時に引き返すのはとても危険です。絶対にやめましょう。"
+  },
+  {
+    "question": "あなたは避難中、落ちている傘を見つけました。\n あたりは薄暗く、見通しが悪いです。どうしますか？",
+    "choices": {
+      "A": {
+        "text": "そのままにしておく",
+        "isCorrect": false,
+        "dest": 9,
+        "damaged": true
+      },
+      "B": {
+        "text": "雨に濡れないように、傘をさして歩く",
+        "isCorrect":false,
+        "dest": 9,
+        "damaged": true
+      },
+      "C": {
+        "text": "マンホールや側溝に落ちないように、傘で地面を探りながら歩く",
+        "isCorrect": true,
+        "dest": 9,
+        "damaged": false
+      }
+    }, 
+    "advice": "足元が見えにくい場合、ふたの空いたマンホールや側溝に落ちる恐れがあり危険です。\n長い棒状のものが手元にある場合、足元を探りながら歩きましょう。"
+  },
+  {
+    "question": "避難所に近いところまで来ましたが、風がかなり強くなってきました。\n どうしますか？",
+    "choices": {
+      "A": {
+        "text": "背筋を伸ばして歩く",
+        "isCorrect": false,
+        "dest": "e-8",
+        "damaged": false
+      },
+      "B": {
+        "text": "姿勢を低くして歩く",
+        "isCorrect": true,
+        "dest": "e-9",
+        "damaged": false
+      },
+      "C": {
+        "text": "風に逆らって走る",
+        "isCorrect": false,
+        "dest": "e-8",
+        "damaged": false
+      }
+    }, 
+    "advice": "姿勢が高かったり、風に逆らったりすると、風に飛ばされてしまう恐れがあります。\n姿勢を低くして避難しましょう。"
+  }
+]
