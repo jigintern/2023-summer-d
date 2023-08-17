@@ -20,7 +20,7 @@ window.onload=function(){
     updateSetButtons();
 
     buttonComponent.feedbackButton.addEventListener("click",()=>{
-       
+
         buttonComponent.answerMode();
         titleComponent.setAttribute("text",quizData.question);
         titleComponent.connectedCallback();
@@ -94,13 +94,13 @@ function updateButtonWithJson(i){
 
     switch(i){
         case 0:
-            buttonComponent.selectButtons[i].textContent=quizData.choices.A;
+            buttonComponent.selectButtons[i].textContent="A: "+quizData.choices.A;
             break;
         case 1:
-            buttonComponent.selectButtons[i].textContent=quizData.choices.B;
+            buttonComponent.selectButtons[i].textContent="B: "+quizData.choices.B;
             break;
         case 2:
-            buttonComponent.selectButtons[i].textContent=quizData.choices.C;
+            buttonComponent.selectButtons[i].textContent="C: "+quizData.choices.C;
             break;
     }
 

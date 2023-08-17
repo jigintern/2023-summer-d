@@ -30,7 +30,6 @@ export class ButtonComponent extends HTMLElement{
 
         }
 
-        //this.feedbackButton.textContent="次に進む";
         this.feedbackButton.style.margin="auto";
         this.feedbackButton.style.width="150px";
         this.feedbackButton.style.height="150px";
@@ -45,6 +44,7 @@ export class ButtonComponent extends HTMLElement{
         this.feedbackButton.style.backgroundSize = "100% 100%";
         this.feedbackButton.style.backgroundPosition="center";
         this.appendChild( this.feedbackButton);
+        
     }
 
     feedbackMode(){
