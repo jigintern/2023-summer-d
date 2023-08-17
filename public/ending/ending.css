@@ -1,6 +1,6 @@
 main {
     width: 100vw;
-    height: 650px;
+    height: 100vh;
     border: 40px solid white;
     background-color: var(--color-secondary);
     display: flex;
