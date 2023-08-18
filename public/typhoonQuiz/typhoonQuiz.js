@@ -25,7 +25,7 @@ window.onload=function(){
 
     buttonComponent.feedbackButton.addEventListener("click",async()=>{
         
-        const queryParameter="?dest="+quizDestination+"&score="+gameScore;
+        let queryParameter="?dest="+quizDestination+"&score="+gameScore;
 
         if(gameState==1){
             window.location.href="/ending/gameover.html"+queryParameter;
@@ -40,7 +40,8 @@ window.onload=function(){
         }
         else if(gameState==3){
             alert("ゲームオーバー");
-            quizDestination="e-9"
+            quizDestination="e-9";
+            queryParameter="?dest="+quizDestination+"&score="+gameScore;
             window.location.href="/ending/gameover.html"+queryParameter;
             console.log("遷移先のpathが間違ってます");
             return;
