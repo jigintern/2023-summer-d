@@ -40,7 +40,7 @@ h1{
     font-size: 72px;
 }
 
-#message,#score{
+#message,#score,#continue{
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 25px;
@@ -54,4 +54,13 @@ h1{
     font-size: 20px;
     font-weight: bold;
     border : none;
+}
+
+#continue{
+    margin-top: 30px;
+}
+
+#pushToQuiz:hover,#pushToIndex:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
 }
