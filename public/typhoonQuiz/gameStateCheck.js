@@ -1,7 +1,10 @@
-let playerHP=3; //仮置き3回間違えたらゲームオーバー
+const initPlayerHP=3;
+let playerHP=initPlayerHP; //仮置き3回間違えたらゲームオーバー
 let gameState;
 
-export function gameStateCheck(choice){
+export let gameScroe=100;
+
+export function gameStateCheck(choice,quizNum){
     console.log(choice.dest)
     if(!isNaN(choice.dest) && !isNaN(parseInt(choice.dest))){
         if(choice.damaged){
@@ -24,5 +27,7 @@ export function gameStateCheck(choice){
         console.log("終わり");
     }
 
+    gameScroe=(quizNum-(initPlayerHP-playerHP)+100);
+    console.log(gameScroe)
     return gameState;
 }

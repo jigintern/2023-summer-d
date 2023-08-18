@@ -1,7 +1,7 @@
 import {ButtonComponent} from"../Components/buttonComponent.js";
 import {TitleComponent} from"../Components/titleComponent.js"
 import {getQuiz} from"./getQuiz.js";
-import {gameStateCheck} from"./gameStateCheck.js";
+import {gameStateCheck,gameScroe} from"./gameStateCheck.js";
 import "../Components/imageButtonComponent.js"
 
 const buttonComponent=new ButtonComponent();
@@ -14,6 +14,7 @@ panel.appendChild(buttonComponent);
 
 let quizDestination=0;
 let quizData;
+let quizNum=0;
 let gameState=0; //0だとゲーム中 1だとゲームオーバー 2だとゴール 3だと怪我によるゲームオーバー
 
 
@@ -23,21 +24,25 @@ window.onload=function(){
     updateSetButtons();
 
     buttonComponent.feedbackButton.addEventListener("click",async()=>{
+        
+        const queryParameter="?dest="+quizDestination+"&score="+gameScroe
 
         if(gameState==1){
-            alert("ゲームオーバー");
-            window.location.href="/ending/gameover.html?dest="+quizDestination;
+            window.location.href="/ending/gameover.html"+queryParameter;
+            console.log("遷移先のpathが間違ってます");
             return;
         }
         else if(gameState==2){
             alert("ゴール");
-            window.location.href="/ending/gameclear.html?dest="+quizDestination;
+            window.location.href="/ending/gameclear.html"+queryParameter;
+            console.log("遷移先のpathが間違ってます");
             return;
         }
         else if(gameState==3){
             alert("ゲームオーバー");
             quizDestination="e-9"
-            window.location.href="/ending/gameover.html?dest="+quizDestination;
+            window.location.href="/ending/gameover.html"+queryParameter;
+            console.log("遷移先のpathが間違ってます");
             return;
         }
 
@@ -103,10 +108,9 @@ function updateSetButtons(){
                 titleComponent.titleText.style.backgroundColor="#B82E49";
                 alert("不正解");
             }
-
-            gameState=gameStateCheck(choice);
+            gameState=gameStateCheck(choice,quizNum);
             quizDestination=choice.dest;
-
+            quizNum++;
         })
     })
 }
