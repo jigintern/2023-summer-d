@@ -38,7 +38,7 @@ class ImageButton extends HTMLElement{
     } 
 
     confirmURLOpen(url){
-        confirm("処理を実行しますか？")?window.location.href=url:"";
+        confirm("スタートページに戻りますか？")?window.location.href=url:"";
     }
 
 }
