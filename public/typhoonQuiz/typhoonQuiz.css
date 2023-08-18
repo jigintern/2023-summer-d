@@ -55,8 +55,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
     background-color: white;
     border-radius: 50%;
     flex-direction: column;
@@ -64,6 +65,7 @@ main {
 }
 
 .sideArea>div>p{
+    margin-top: 8px;
     font-size: 19px;
 }
 
