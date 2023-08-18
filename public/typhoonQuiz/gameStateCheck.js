@@ -24,5 +24,8 @@ export function gameStateCheck(choice){
         console.log("終わり");
     }
 
+    const hp = document.getElementById("hp");
+    hp.textContent = playerHP;
+    
     return gameState;
 }
