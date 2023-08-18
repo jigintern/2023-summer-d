@@ -31,5 +31,9 @@ export function gameStateCheck(choice,quizNum){
 
     gameScore=(quizNum==9) ? gameScore+gameClearAddScore : gameScore;
     console.log(gameScore)
-    return gameState;
+  
+    const hp = document.getElementById("hp");
+    hp.textContent = playerHP;
+    
+  　return gameState;
 }

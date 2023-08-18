@@ -51,6 +51,27 @@ main {
     background-color:#008080;
 }
 
+.sideArea>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    flex-direction: column;
+    color: #487C38;
+}
+
+.sideArea>div>p{
+    font-size: 19px;
+}
+
+#hp{
+    font-size: 40px;
+    font-weight: bold;
+}
+
 .homeButton{
     background-image:url(/image/home.jpg);
     background-repeat: no-repeat;
