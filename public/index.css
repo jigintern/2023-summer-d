@@ -24,7 +24,7 @@ main {
   flex-direction: column;
 }
 
-.title-widget>h1{
+.title-widget>h1 {
   width: 420px;
   height: 150px;
   border: none;
