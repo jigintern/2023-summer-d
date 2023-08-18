@@ -26,8 +26,9 @@ export function gameStateCheck(choice,quizNum){
         gameState=1;
         console.log("終わり");
     }
+    gameScroe=quizNum-(initPlayerHP-playerHP);
 
-    gameScroe=(quizNum-(initPlayerHP-playerHP)+101);
+    gameScroe=(quizNum==9) ? gameScroe+101 : gameScroe;
     console.log(gameScroe)
     return gameState;
 }
