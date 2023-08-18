@@ -25,6 +25,7 @@ main {
 }
 
 .title-widget>h1 {
+  font-family: 'Kiwi Maru', serif; 
   width: 420px;
   height: 150px;
   border: none;

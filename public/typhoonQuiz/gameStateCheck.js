@@ -1,8 +1,9 @@
 const initPlayerHP=3;
+const gameClearAddScore=101;
 let playerHP=initPlayerHP; //仮置き3回間違えたらゲームオーバー
 let gameState;
 
-export let gameScroe=101;
+export let gameScore=101;
 
 export function gameStateCheck(choice,quizNum){
     console.log(choice.dest)
@@ -26,8 +27,13 @@ export function gameStateCheck(choice,quizNum){
         gameState=1;
         console.log("終わり");
     }
+    gameScore=quizNum-(initPlayerHP-playerHP);
 
-    gameScroe=(quizNum-(initPlayerHP-playerHP)+101);
-    console.log(gameScroe)
-    return gameState;
+    gameScore=(quizNum==9) ? gameScore+gameClearAddScore : gameScore;
+    console.log(gameScore)
+  
+    const hp = document.getElementById("hp");
+    hp.textContent = playerHP;
+    
+  　return gameState;
 }
