@@ -29,11 +29,17 @@ class ImageButton extends HTMLElement{
     connectedCallback(){
 
         const url=this.getAttribute("url") || ""; 
+        const isConfirm=this.getAttribute("isConfirm") || ""; 
         this.shadowRoot.getElementById(this.buttonId).addEventListener('click',()=>{
-          window.location.href=url;
+            isConfirm ? this.confirmURLOpen(url) : window.location.href=url;
+          
         });
         
     } 
+
+    confirmURLOpen(url){
+        confirm("処理を実行しますか？")?window.location.href=url:"";
+    }
 
 }
 
