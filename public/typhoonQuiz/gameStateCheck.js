@@ -2,7 +2,7 @@ const initPlayerHP=3;
 let playerHP=initPlayerHP; //仮置き3回間違えたらゲームオーバー
 let gameState;
 
-export let gameScroe=100;
+export let gameScroe=101;
 
 export function gameStateCheck(choice,quizNum){
     console.log(choice.dest)
@@ -27,7 +27,7 @@ export function gameStateCheck(choice,quizNum){
         console.log("終わり");
     }
 
-    gameScroe=(quizNum-(initPlayerHP-playerHP)+100);
+    gameScroe=(quizNum-(initPlayerHP-playerHP)+101);
     console.log(gameScroe)
     return gameState;
 }
