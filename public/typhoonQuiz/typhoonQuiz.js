@@ -1,7 +1,7 @@
 import {ButtonComponent} from"../Components/buttonComponent.js";
 import {TitleComponent} from"../Components/titleComponent.js"
 import {getQuiz} from"./getQuiz.js";
-import {gameStateCheck,gameScroe} from"./gameStateCheck.js";
+import {gameStateCheck,gameScore} from"./gameStateCheck.js";
 import "../Components/imageButtonComponent.js"
 
 const buttonComponent=new ButtonComponent();
@@ -25,7 +25,7 @@ window.onload=function(){
 
     buttonComponent.feedbackButton.addEventListener("click",async()=>{
         
-        const queryParameter="?dest="+quizDestination+"&score="+gameScroe
+        const queryParameter="?dest="+quizDestination+"&score="+gameScore;
 
         if(gameState==1){
             window.location.href="/ending/gameover.html"+queryParameter;
