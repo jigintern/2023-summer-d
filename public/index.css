@@ -1,75 +1,48 @@
-
 main {
-    width: 100vw;
-    height: 100vh;
-    border: 40px solid white;
-    background-color: #6EA4CA;
-    display: grid;
-    place-content: center;
-    background-image: url(image/index.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    grid-template: "pop title-widget" 1fr
-                   ". title-widget" 1fr
-                   / 1fr 1fr;
-  
-  }
-  
-  .pop {
-    grid-area: pop;
-  
-    width: 200px;
-    height: 200px;
-    margin-top: -30px;
-    margin-left: -30px;
-    border-radius: 50%;
-    border: 27px solid #274765;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-  
-    background-color: #F4FBFE;
-    
-    display: grid;
-    place-content: center;
-    
-    transform: rotate(-15deg);
-  }
-  
-  .title-widget {
-    grid-area: title-widget;
-    
-    width: 375px;
-    height: 375px;
-    margin-top: 100px;
-    margin-bottom: 40px;
-    border-radius: 50%;
-  
-    background-color: #F4FBFE;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-  }
-  
-  .title-widget>h1 {
-    font-size: 48px;
-  }
-  
-  .title-widget>button {
-    
-    width: 200px;
-    margin-top: 32px;
-  
-    border-radius: 100vh;
-  
-    border: none;
-    background-color: #274765;
-    font-size: 32px;
-    font-weight: bold;
-    color: #FFFFFF
-  }
+  width: 100vw;
+  height: 100vh;
+  border: 40px solid white;
+  display: grid;
+  background-color: var(--color-secondary);
+  place-content: center;
+  background-image: url(image/indexBackground.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-template:
+    ". ." 1fr
+    ". title-widget" 2fr
+    ". ." 1fr
+    / 1fr 2fr ;
+}
+
+.title-widget {
+  grid-area: title-widget;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-widget>h1 {
+  width: 420px;
+  height: 150px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--color-primary);
+  color: var(--color-other);
+  text-align: center;
+  padding-top: 15px;
+  font-size: 42px;
+}
+
+.title-widget>button {    
+  width: 10vw;
+  height: 10vh;
+  margin-top: 32px;
+  border-radius: 100vh;
+  border: none;
+  background-color: var(--color-other);
+  font-size: 24px;
+  font-weight: bold;
+}
