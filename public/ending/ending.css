@@ -12,7 +12,8 @@ main {
 .image-margin{
     display: flex; 
     width: 100%;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-margin>div{
