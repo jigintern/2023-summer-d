@@ -18,6 +18,9 @@ class ImageButton extends HTMLElement{
                 width: 100px;
                 height: 100px;
             }
+            #${this.buttonId}:hover{
+                opacity:0.5;
+              }
             </style>
             <button id=${this.buttonId}></button>
         `;

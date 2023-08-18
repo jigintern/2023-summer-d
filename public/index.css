@@ -47,3 +47,8 @@ main {
   font-size: 24px;
   font-weight: bold;
 }
+
+#start-button:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+}

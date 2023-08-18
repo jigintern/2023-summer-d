@@ -54,6 +54,16 @@ export class ButtonComponent extends HTMLElement{
         this.feedbackButton.style.backgroundRepeat="no-repeat";
         this.feedbackButton.style.backgroundSize="100% 100%";
         this.feedbackButton.style.backgroundPosition="center";
+        this.feedbackButton.addEventListener('mouseover', () => {
+            this.feedbackButton.style.cursor='pointer';
+            this.feedbackButton.style.transform='translateY(-5px)';
+            this.feedbackButton.style.boxShadow='0px 5px darkgray';
+        })
+        this.feedbackButton.addEventListener('mouseout', () => {
+            this.feedbackButton.style.cursor='auto';
+            this.feedbackButton.style.transform='none';
+            this.feedbackButton.style.boxShadow='none';
+        })
         this.appendChild( this.feedbackButton);
         
     }
